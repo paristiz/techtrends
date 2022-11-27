@@ -1,0 +1,133 @@
+
+
+phalc@LAPTOP-4067938K MINGW64 ~/nd064_course_1/project/techtrends (main)
+$ docker build -t techtrends .
+
+phalc@LAPTOP-4067938K MINGW64 ~/nd064_course_1/project/techtrends (main)
+$ docker run -d -p 7111:3111 techtrends
+6d031c323289a17b3f4e7ff36aeee4985f4c7bcd618514ee60140fa708bd37b5
+
+phalc@LAPTOP-4067938K MINGW64 ~/nd064_course_1/project/techtrends (main)
+$ docker ps
+CONTAINER ID   IMAGE        COMMAND                  CREATED          STATUS          PORTS                    NAMES
+6d031c323289   techtrends   "python app_pablo6.py"   42 seconds ago   Up 41 seconds   0.0.0.0:7111->3111/tcp   pedantic_elion
+
+
+phalc@LAPTOP-4067938K MINGW64 ~/nd064_course_1/project/techtrends (main)
+$ docker logs 6d031c323289
+ * Serving Flask app 'app_pablo6' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+INFO:app_pablo6:connection number:1
+
+INFO:app_pablo6:number of posts in db:6
+
+INFO:app_pablo6:metrics web page
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:52:31] "GET /metrics HTTP/1.1" 200 -
+INFO:app_pablo6:connection number:2
+
+INFO:app_pablo6:number of posts in db:6
+
+INFO:app_pablo6:metrics web page
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:52:34] "GET /metrics HTTP/1.1" 200 -
+INFO:app_pablo6:connection number:3
+
+INFO:app_pablo6:main page
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:52:45] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:52:45] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app_pablo6:connection number:4
+
+INFO:app_pablo6:main page
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:52:47] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:52:47] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app_pablo6:connection number:5
+
+INFO:app_pablo6:post_ok_id:1
+
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:52:49] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:52:49] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app_pablo6:connection number:6
+
+INFO:app_pablo6:main page
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:53:30] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:53:30] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app_pablo6:connection number:7
+
+INFO:app_pablo6:post_ok_id:5
+
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:53:33] "GET /5 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:53:33] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app_pablo6:connection number:8
+
+INFO:app_pablo6:main page
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:53:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:53:35] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app_pablo6:connection number:9
+
+error 404
+ERROR:app_pablo6:wrong id
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:53:40] "GET /20 HTTP/1.1" 404 -
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:53:40] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app_pablo6:about page
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:53:43] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:53:43] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app_pablo6:connection number:10
+
+INFO:app_pablo6:number of posts in db:6
+
+INFO:app_pablo6:metrics web page
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:53:48] "GET /metrics HTTP/1.1" 200 -
+INFO:app_pablo6:connection number:11
+
+INFO:app_pablo6:main page
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:53:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:53:55] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app_pablo6:about page
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:53:57] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:53:57] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:53:58] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:53:58] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app_pablo6:connection number:12
+
+INFO:app_pablo6:title: test
+
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:54:06] "POST /create HTTP/1.1" 302 -
+INFO:app_pablo6:connection number:13
+
+INFO:app_pablo6:main page
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:54:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:54:06] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:54:13] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:54:13] "GET /static/css/main.css HTTP/1.1" 304 -
+error no title
+ERROR:app_pablo6:error no title given
+
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:54:16] "POST /create HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:54:16] "GET /static/css/main.css HTTP/1.1" 304 -
+error no title
+ERROR:app_pablo6:error no title given
+
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:54:17] "POST /create HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:54:17] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app_pablo6:connection number:14
+
+INFO:app_pablo6:main page
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:54:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:54:19] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app_pablo6:connection number:15
+
+INFO:app_pablo6:number of posts in db:7
+
+INFO:app_pablo6:metrics web page
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:54:25] "GET /metrics HTTP/1.1" 200 -
+INFO:app_pablo6:connection number:16
+
+INFO:app_pablo6:main page
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:55:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:55:20] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:172.17.0.1 - - [27/Nov/2022 19:56:18] "GET /healthz HTTP/1.1" 200 -
