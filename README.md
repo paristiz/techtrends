@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+<<<<< HEAD
 # techtrends
 =======
 # TechTreds Web Application
